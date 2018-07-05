@@ -14,7 +14,7 @@
 #install something 
 sudo apt-get update
 updatedb
-sudo apt-get install curl
+sudo apt-get install curl -y
 
 # install tree to view floder
 sudo apt-get install tree -y
@@ -58,6 +58,20 @@ echo "
     	interactive = auto" > ~/.gitconfig
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sudo apt-get install autojump -y
+
+echo "
+ plugins=(
+  autojump
+  extract
+  catimg
+  ruby
+  textmate
+  osx
+  mvn
+  gradle
+  )
+" >> ~/.zshrc
 
 # see shells, change each user shell
 # cat /etc/shells
