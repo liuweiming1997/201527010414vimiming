@@ -1,9 +1,20 @@
 
 #!/bin/bash
 
+
+
+#####################################################################################
+################ must use root ######################################################
+#####################################################################################
+
+
+
+
+
 #install something 
 sudo apt-get update
 updatedb
+sudo apt-get install curl
 
 # install tree to view floder
 sudo apt-get install tree -y
@@ -18,7 +29,7 @@ set cindent
 set nu
 set ts=4
 set sw=4
-" >> ~/.vimrc
+" > ~/.vimrc
 # set nonu to cancle line-number
 
 sudo apt-get install zsh -y
@@ -44,7 +55,7 @@ echo "
     	status = auto
     	diff = auto
     	branch = auto
-    	interactive = auto" >> ~/.gitconfig
+    	interactive = auto" > ~/.gitconfig
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
