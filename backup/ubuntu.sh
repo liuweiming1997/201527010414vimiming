@@ -46,6 +46,7 @@ echo "
         goto      = reset --hard
         amend = commit --amend    
     	remoteadd = remote add origin    
+		remoteset = remote set-url origin
     	co = checkout
     	reflog = reflog
 	 [user]
