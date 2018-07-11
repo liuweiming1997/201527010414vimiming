@@ -30,8 +30,8 @@ set nu
 set ts=4
 set sw=4
 " > ~/.vimrc
-# set nonu to cancle line-number
 
+# set nonu to cancle line-number
 sudo apt-get install zsh -y
 echo "
      [alias]
@@ -58,9 +58,11 @@ echo "
     	branch = auto
     	interactive = auto" > ~/.gitconfig
 
+# install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 sudo apt-get install autojump -y
 
+# maybe error
 echo "
  plugins=(
   autojump
@@ -93,6 +95,8 @@ sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
 sudo apt-get install golang-go
 
+#install glide 
+curl https://glide.sh/get | sh
 
 ################################################################################################################################################################
 #     TODO: go-path setting
