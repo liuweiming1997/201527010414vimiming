@@ -92,3 +92,16 @@ chmod +x /usr/local/bin/docker-compose
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
 sudo apt-get install golang-go
+
+
+################################################################################################################################################################
+#     TODO: go-path setting
+#     first: go env | grep GOPATH
+#     Add it to ~/.profile
+#     like this:
+#     export GOPATH="/home/vimi/go"
+#     export GOBIN="$GOPATH/bin"
+#     PATH="$GOPATH/bin:$HOME/bin:$HOME/.local/bin:$PATH"
+#     
+#     WARNING: need to reboot
+#################################################################################################################################################################
