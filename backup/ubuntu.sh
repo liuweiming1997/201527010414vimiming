@@ -73,6 +73,7 @@ echo "
   osx
   mvn
   gradle
+  web-search
   )
 " >> ~/.zshrc
 
