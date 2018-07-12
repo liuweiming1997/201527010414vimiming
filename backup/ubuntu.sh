@@ -77,6 +77,17 @@ echo "
   )
 " >> ~/.zshrc
 
+# svn setting
+echo "
+##################svn######################
+alias svn_log="svn log | head -20"
+alias svn_update="svn update"
+alias svn_delworkspace="svn revert -R *"
+#   svn cl vimi-fix test.php  
+#   svn ci -m 'commit' --cl vimi-fix 
+##################svn######################
+" >> ~/.zshrc
+
 # see shells, change each user shell
 # cat /etc/shells
 # vi /etc/passwd
