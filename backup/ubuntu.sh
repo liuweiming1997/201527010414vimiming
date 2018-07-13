@@ -7,7 +7,8 @@
 ################ must use root ######################################################
 #####################################################################################
 
-
+# if fail do not continue
+set -e
 
 
 
@@ -107,7 +108,7 @@ sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
 sudo apt-get install golang-go
 
-#install glide 
+#install glide before it should set go-path and go env
 curl https://glide.sh/get | sh
 
 ################################################################################################################################################################
@@ -121,3 +122,9 @@ curl https://glide.sh/get | sh
 #     
 #     WARNING: need to reboot
 #################################################################################################################################################################
+
+
+sudo apt-get autoremove
+sudo apt-get autoclean
+
+
