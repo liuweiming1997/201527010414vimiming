@@ -123,6 +123,9 @@ curl https://glide.sh/get | sh
 #     WARNING: need to reboot
 #################################################################################################################################################################
 
+# install byobu
+sudo apt-get install byobu
+
 
 sudo apt-get autoremove
 sudo apt-get autoclean
