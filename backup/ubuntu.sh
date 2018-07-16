@@ -44,7 +44,7 @@ echo "
         newbranch = checkout -b
         delbranch = branch -D
         delcommit = reset HEAD^
-        goto      = reset --hard
+        goto      = reset --hard    bb9319889615f5235ef49d4355d6177b39e40499
         amend = commit --amend    
     	remoteadd = remote add origin    
 		remoteset = remote set-url origin
@@ -131,3 +131,13 @@ sudo apt-get autoremove
 sudo apt-get autoclean
 
 
+################################################################################################
+#
+#     svn log
+#     alias svn_log="svn log | head -20"
+#     alias svn_update="svn update"
+#     alias svn_delworkspace="svn revert -R *"
+#     svn cl vimi-fix test.php  
+#     svn ci -m 'commit' --cl vimi-fix 
+#
+#################################################################################################
