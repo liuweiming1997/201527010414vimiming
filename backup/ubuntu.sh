@@ -126,13 +126,17 @@ curl https://glide.sh/get | sh
 # install byobu
 sudo apt-get install byobu
 
+# install ctags
+sudo apt-get install ctags
+sudo apt-get upgrade ctags
+# https://www.jianshu.com/p/ad907d987d48
 
 sudo apt-get autoremove
 sudo apt-get autoclean
 
 
 ################################################################################################
-#
+#     install svn
 #     svn log
 #     alias svn_log="svn log | head -20"
 #     alias svn_update="svn update"
