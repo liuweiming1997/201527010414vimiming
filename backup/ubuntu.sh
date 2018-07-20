@@ -131,9 +131,11 @@ sudo apt-get install ctags
 sudo apt-get upgrade ctags
 # https://www.jianshu.com/p/ad907d987d48
 
-sudo apt-get autoremove
-sudo apt-get autoclean
 
+#install shutter and prease enter
+sudo add-apt-repository ppa:shutter/ppa
+sudo apt-get update
+sudo apt-get install shutter -y
 
 ################################################################################################
 #     install svn
@@ -145,3 +147,8 @@ sudo apt-get autoclean
 #     svn ci -m 'commit' --cl vimi-fix 
 #
 #################################################################################################
+
+
+
+sudo apt-get autoremove
+sudo apt-get autoclean
