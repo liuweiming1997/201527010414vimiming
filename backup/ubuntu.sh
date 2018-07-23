@@ -108,8 +108,11 @@ sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
 sudo apt-get install golang-go
 
-#install glide before it should set go-path and go env
+# install glide before it should set go-path and go env
 curl https://glide.sh/get | sh
+
+# install goimports, maybe should export http_proxy, https_proxy
+go get golang.org/x/tools/cmd/goimports
 
 ################################################################################################################################################################
 #     TODO: go-path setting
