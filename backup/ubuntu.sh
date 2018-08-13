@@ -44,7 +44,7 @@ echo "
         newbranch = checkout -b
         delbranch = branch -D
         delcommit = reset HEAD^
-        goto      = reset --hard    bb9319889615f5235ef49d4355d6177b39e40499
+        goto      = reset --hard
         amend = commit --amend    
     	remoteadd = remote add origin    
 		remoteset = remote set-url origin
@@ -87,6 +87,14 @@ alias svn_delworkspace="svn revert -R *"
 #   svn cl vimi-fix test.php  
 #   svn ci -m 'commit' --cl vimi-fix 
 ##################svn######################
+" >> ~/.zshrc
+
+# docker stop cmd
+echo "
+##################docker######################
+alias docker_stop="docker stop $(docker ps -q)"
+alias docker_rm="docker rm -f $(docker ps -aq)"
+##################docker######################
 " >> ~/.zshrc
 
 # see shells, change each user shell
