@@ -65,17 +65,18 @@ sudo apt-get install autojump -y
 
 # maybe error
 echo "
- plugins=(
-  autojump
-  extract
-  catimg
-  ruby
+plugins=(
+  git
   textmate
+  ruby
+  autojump
   osx
   mvn
   gradle
   web-search
-  )
+  git-open
+  zsh-autosuggestions
+)
 " >> ~/.zshrc
 
 # svn setting
@@ -95,6 +96,14 @@ echo "
 alias docker_stop="docker stop $(docker ps -q)"
 alias docker_rm="docker rm -f $(docker ps -aq)"
 ##################docker######################
+" >> ~/.zshrc
+
+echo "
+##################alias######################
+alias cp="cp -i"
+alias mv="mv -i"
+alias github="git-open"
+##################alias######################
 " >> ~/.zshrc
 
 # see shells, change each user shell
@@ -164,6 +173,12 @@ sudo apt-get install shutter -y
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
 
+######################################
+# 查看git的配置
+# git config --global http.proxy sock5://127.0.0.1:1080
+# git config --global https.proxy sock5://127.0.0.1:1080
+# git config --list
+#######################################
 
 sudo apt-get autoremove
 sudo apt-get autoclean
