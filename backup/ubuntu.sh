@@ -64,6 +64,8 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 sudo apt-get install autojump -y
 
 # maybe error
+# [install plugins](https://juejin.im/entry/5ae00e54f265da0b8635ea5c)
+# 还有一个 zsh-syntax-highlighting
 echo "
 plugins=(
   git
@@ -74,7 +76,7 @@ plugins=(
   mvn
   gradle
   web-search
-  git-open
+  git-open            
   zsh-autosuggestions
 )
 " >> ~/.zshrc
@@ -180,5 +182,6 @@ sudo apt-get install git-lfs
 # git config --list
 #######################################
 
-sudo apt-get autoremove
-sudo apt-get autoclean
+# 注意!!!!! 能否使用
+# sudo apt-get autoremove
+# sudo apt-get autoclean
