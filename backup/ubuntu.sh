@@ -175,6 +175,11 @@ sudo apt-get install shutter -y
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
 
+# install dos2unix
+# refer http://kuanghy.github.io/2017/03/19/git-lf-or-crlf
+sudo apt-get install dos2unix
+cat "alias gitclear=find . -type f -exec dos2unix {} +" >> ~/.zshrc
+
 ######################################
 # 查看git的配置
 # git config --global http.proxy sock5://127.0.0.1:1080
