@@ -12,7 +12,7 @@ set -e
 
 
 
-#install something 
+#install something
 sudo apt-get update
 updatedb
 sudo apt-get install curl -y
@@ -45,8 +45,8 @@ echo "
         delbranch = branch -D
         delcommit = reset HEAD^
         goto      = reset --hard
-        amend = commit --amend    
-    	remoteadd = remote add origin    
+        amend = commit --amend
+    	remoteadd = remote add origin
 		remoteset = remote set-url origin
     	co = checkout
     	reflog = reflog
@@ -76,7 +76,7 @@ plugins=(
   mvn
   gradle
   web-search
-  git-open            
+  git-open
   zsh-autosuggestions
 )
 " >> ~/.zshrc
@@ -87,8 +87,8 @@ echo "
 alias svn_log="svn log | head -20"
 alias svn_update="svn update"
 alias svn_delworkspace="svn revert -R *"
-#   svn cl vimi-fix test.php  
-#   svn ci -m 'commit' --cl vimi-fix 
+#   svn cl vimi-fix test.php
+#   svn ci -m 'commit' --cl vimi-fix
 ##################svn######################
 " >> ~/.zshrc
 
@@ -116,7 +116,7 @@ alias github="git-open"
 
 
 # install docker
-curl -fsSL https://get.docker.com/ | sh 
+curl -fsSL https://get.docker.com/ | sh
 
 # install docker-compose
 curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
@@ -141,7 +141,7 @@ go get golang.org/x/tools/cmd/goimports
 #     export GOPATH="/home/vimi/go"
 #     export GOBIN="$GOPATH/bin"
 #     PATH="$GOPATH/bin:$HOME/bin:$HOME/.local/bin:$PATH"
-#     
+#
 #     WARNING: need to reboot
 #################################################################################################################################################################
 
@@ -165,8 +165,8 @@ sudo apt-get install shutter -y
 #     alias svn_log="svn log | head -20"
 #     alias svn_update="svn update"
 #     alias svn_delworkspace="svn revert -R *"
-#     svn cl vimi-fix test.php  
-#     svn ci -m 'commit' --cl vimi-fix 
+#     svn cl vimi-fix test.php
+#     svn ci -m 'commit' --cl vimi-fix
 #
 #################################################################################################
 
@@ -179,6 +179,11 @@ sudo apt-get install git-lfs
 # refer http://kuanghy.github.io/2017/03/19/git-lf-or-crlf
 sudo apt-get install dos2unix
 cat "alias gitclear=find . -type f -exec dos2unix {} +" >> ~/.zshrc
+
+# install xclip
+sudo apt-get install xclip
+# how to use: cat file | xclip -selection clipboard
+#
 
 ######################################
 # 查看git的配置
