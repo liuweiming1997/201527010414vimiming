@@ -33,3 +33,5 @@ sync_zsh
 sync_sublime
 
 
+#sudo mv auto-sync.sh /etc/profile.d/
+
