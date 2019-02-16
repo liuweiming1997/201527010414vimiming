@@ -23,82 +23,13 @@ sudo apt-get install tree -y
 # To install oh-my-zsh first should install zsh
 # auto use zsh
 sudo apt-get install git -y
-echo "
-syntax on
-set autoindent
-set cindent
-set nu
-set ts=4
-set sw=4
-" > ~/.vimrc
 
 # set nonu to cancle line-number
 sudo apt-get install zsh -y
-echo "
-     [alias]
-        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %C(bold green)%s%Creset %C(white)<%an>%Creset %C(white)(%ci)%Creset' --abbrev-commit
-        st = status
-        deladd = reset HEAD
-        delworkspace = checkout --
-        modified = rebase -i
-        newbranch = checkout -b
-        delbranch = branch -D
-        delcommit = reset HEAD^
-        goto      = reset --hard
-        amend = commit --amend
-    	remoteadd = remote add origin
-		remoteset = remote set-url origin
-    	co = checkout
-    	reflog = reflog
-	 [user]
-    	email = vimiming@gmail.com
-    	name = vimi
-	 [color]
-    	status = auto
-    	diff = auto
-    	branch = auto
-    	interactive = auto" > ~/.gitconfig
 
 # install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 sudo apt-get install autojump -y
-
-# maybe error
-# [install plugins](https://juejin.im/entry/5ae00e54f265da0b8635ea5c)
-# 还有一个 zsh-syntax-highlighting
-echo "
-plugins=(
-  git
-  textmate
-  ruby
-  autojump
-  osx
-  mvn
-  gradle
-  web-search
-  git-open
-  zsh-autosuggestions
-)
-" >> ~/.zshrc
-
-# svn setting
-echo "
-##################svn######################
-alias svn_log="svn log | head -20"
-alias svn_update="svn update"
-alias svn_delworkspace="svn revert -R *"
-#   svn cl vimi-fix test.php
-#   svn ci -m 'commit' --cl vimi-fix
-##################svn######################
-" >> ~/.zshrc
-
-# docker stop cmd
-echo "
-##################docker######################
-alias docker_stop="docker stop $(docker ps -q)"
-alias docker_rm="docker rm -f $(docker ps -aq)"
-##################docker######################
-" >> ~/.zshrc
 
 echo "
 ##################alias######################
@@ -144,9 +75,6 @@ go get golang.org/x/tools/cmd/goimports
 #
 #     WARNING: need to reboot
 #################################################################################################################################################################
-
-# install byobu
-sudo apt-get install byobu
 
 # install ctags
 sudo apt-get install ctags
@@ -201,3 +129,7 @@ pip install cheat
 
 # git icdiff
 # https://github.com/jeffkaufman/icdiff
+
+# install tmux
+# tmux -V
+# tmux next-2.9
