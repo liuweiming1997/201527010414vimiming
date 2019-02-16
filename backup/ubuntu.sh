@@ -195,3 +195,9 @@ sudo apt-get install xclip
 # 注意!!!!! 能否使用
 # sudo apt-get autoremove
 # sudo apt-get autoclean
+
+# cheat
+pip install cheat
+
+# git icdiff
+# https://github.com/jeffkaufman/icdiff
