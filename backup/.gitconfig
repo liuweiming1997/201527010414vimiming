@@ -1,0 +1,26 @@
+
+     [alias]
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %C(bold green)%s%Creset %C(white)<%an>%Creset %C(white)(%ci)%Creset' --abbrev-commit
+        st = status
+        deladd = reset HEAD
+        delworkspace = checkout --
+        modified = rebase -i
+        newbranch = checkout -b
+        delbranch = branch -D
+        delcommit = reset HEAD^
+        goto      = reset --hard
+        amend = commit --amend    
+        remoteadd = remote add origin    
+        remoteset = remote set-url origin
+        co = checkout
+        reflog = reflog
+        delcache = rm -r --cache
+
+         [user]
+        email = vimiming@gmail.com
+        name = vimi
+         [color]
+        status = auto
+        diff = auto
+        branch = auto
+        interactive = auto
