@@ -53,6 +53,39 @@ curl -fsSL https://get.docker.com/ | sh
 curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
+# install kubectl
+https://kubernetes.io/docs/tasks/tools/install-kubectl/
+
+# install minikube
+# https://kubernetes.io/docs/tasks/tools/install-minikube/
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \ && chmod +x minikube
+sudo cp minikube /usr/local/bin && rm minikube
+
+# clean up enviroment
+sudo rm -rf /var/lib/minikube/certs/
+sudo rm -rf /etc/kubernetes
+sudo rm -rf /data/minikube
+sudo rm -rf ~/.minikube
+
+# Setup configs
+sudo minikube config set kubernetes-version v1.12.7
+
+# Launch Minikube
+CHANGE_MINIKUBE_NONE_USER=true sudo -E minikube start --vm-driver=none
+
+# Enable Ingress
+sudo minikube addons enable ingress
+sudo kubectl get pods -n kube-system
+
+# know issue
+OPEN storage-provisioner crashing looping (Error getting server version: Get https://10.96.0.1:443/version: dial tcp 10.96.0.1:443: i/o timeout): https://github.com/kubernetes/minikube/issues/3129  
+CLOSE crictl not found in system path (not a error, can be ignored): https://github.com/kubernetes/kubeadm/issues/613
+CLOSE minikube needs to downgrade docker to 18.06: https://github.com/kubernetes/minikube/issues/3323
+
+
+###############################################################################
+
+
 # install golang
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
@@ -63,6 +96,9 @@ curl https://glide.sh/get | sh
 
 # install goimports, maybe should export http_proxy, https_proxy
 go get golang.org/x/tools/cmd/goimports
+
+# k8s issue for build up minikub
+
 
 ################################################################################################################################################################
 #     TODO: go-path setting
